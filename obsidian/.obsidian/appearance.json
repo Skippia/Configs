@@ -1,0 +1,16 @@
+{
+  "accentColor": "#fafafa",
+  "enabledCssSnippets": [
+    "obsidian-workspace-background(Shiba Uni Theme)"
+  ],
+  "interfaceFontFamily": "JetBrainsMonoNL Nerd Font,Helvetica",
+  "baseFontSize": 12,
+  "theme": "obsidian",
+  "textFontFamily": "JetBrainsMonoNL Nerd Font",
+  "monospaceFontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "cssTheme": "Border",
+  "baseFontSizeAction": true,
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "showRibbon": true
+}

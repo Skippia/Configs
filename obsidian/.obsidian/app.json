@@ -1,0 +1,16 @@
+{
+  "attachmentFolderPath": "_assets",
+  "alwaysUpdateLinks": true,
+  "promptDelete": true,
+  "spellcheck": false,
+  "showUnsupportedFiles": false,
+  "newFileLocation": "current",
+  "newFileFolderPath": "vault",
+  "focusNewTab": true,
+  "propertiesInDocument": "hidden",
+  "showLineNumber": false,
+  "showInlineTitle": true,
+  "strictLineBreaks": false,
+  "readableLineLength": true,
+  "userIgnoreFilters": null
+}

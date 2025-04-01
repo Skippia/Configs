@@ -1,0 +1,253 @@
+{
+  "main": {
+    "id": "e2caf02c3e6d745e",
+    "type": "split",
+    "children": [
+      {
+        "id": "8fce5ece3311f946",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f57c6a187ede4c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TEMP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TEMP"
+            }
+          },
+          {
+            "id": "d8fadb57964e6f94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Misc/Content/Actresses.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Actresses"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b5077582b5965425",
+    "type": "split",
+    "children": [
+      {
+        "id": "1936bed2cb57c95f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "308cc4e5e73600f3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "460b9ae1b239ed87",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fd38e567d3dc4390",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 368.50418853759766
+  },
+  "right": {
+    "id": "d9ed25606f8a08ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "10eccd641a9d38d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "382bb2c2e5eaf5f6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Sex Investigation/Men tips.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Men tips"
+            }
+          },
+          {
+            "id": "03daba7a89462cce",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sex Investigation/Men tips.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Men tips"
+            }
+          },
+          {
+            "id": "81a1f6fa4cee6341",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0d0887c17396a68f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sex Investigation/Men tips.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Men tips"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "omnisearch:Omnisearch": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-importer:Open Importer": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "callout-manager:Insert Callout": false,
+      "dbfolder:Create a new database table": false
+    }
+  },
+  "active": "d8fadb57964e6f94",
+  "lastOpenFiles": [
+    "TEMP.md",
+    "_assets/image-288.webp",
+    "_assets/image-287.webp",
+    "Misc/Content/Actresses.md",
+    "_assets/image-286.webp",
+    "Education/unknown-course/1/Root.md",
+    "Education/unknown-course/1",
+    "Education/unknown-course",
+    "Sex experiments.md",
+    "Big pictures/2. Kissing — Big Picture/Kiss ultimate map.md",
+    "_assets/image-285.webp",
+    "_assets/image-284.webp",
+    "_assets/image-283.webp",
+    "_assets/image-282.webp",
+    "_assets/image-281.webp",
+    "_assets/image-280.webp",
+    "_assets/image-279.webp",
+    "Big pictures/2. Kissing — Big Picture/Kissing - practice.canvas",
+    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_225947_extracted.mp4",
+    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230043_extracted.mp4",
+    "Sex Investigation/Ultimate maps/Men tips - [Map].md",
+    "Sex Investigation/Men tips.canvas",
+    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230410_extracted 1.mp4",
+    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230410_extracted.mp4",
+    "Sex Investigation/2. sessions - practice.md",
+    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230612_extracted.mp4",
+    "Sex Investigation/3. sex sequence - practice.md",
+    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230720_extracted.mp4",
+    "_assets/rubrub.tiny.little.titties.4.disc2-mrspalmer.mp4-20250323_180049_extracted.mp4-20250323_232618_extracted.mp4",
+    "_assets/rubrub.tiny.little.titties.4.disc2-mrspalmer.mp4-20250323_180049_extracted.mp4-20250323_232641_extracted.mp4",
+    "Sex Investigation/Ultimate maps/Common pose variations.md",
+    "Education/Erogenous zones.md",
+    "Education/13. petting.md",
+    "Education/Random sex tips.md",
+    "Misc/Sex clothes in shops.md",
+    "TODO.md",
+    "Ideas/Dating ideas & Scenarios & Strategy.md",
+    "Sex Investigation/Poses tips.canvas",
+    "Ideas/Detailed-scenarios (Role play).md",
+    "Ideas/Genius ideas.md",
+    "Sex Investigation/Transitions between poses.md",
+    "Sex Investigation/Ultimate maps/Poses - [Map].md",
+    "Big pictures/1. How to F long — Big Picture/Book 1.md",
+    "Ideas/Ideas - practice.md",
+    "useful videos - tips.md",
+    "ш.md",
+    "Sex Investigation/Ultimate maps/Ideas - [Map].md",
+    "Sex Investigation/Women tips.canvas",
+    "Sex Investigation/Ultimate maps/Men tips - [Map] - Copy.md",
+    "Ideas/Ideas.canvas",
+    "Sex Investigation/Men tips - Copy (4).canvas",
+    "Sex Investigation/Men tips - Copy (3).canvas",
+    "Sex Investigation/Men tips - Copy (2).canvas",
+    "Sex Investigation/Men tips - Copy.canvas",
+    "Condoms size.canvas"
+  ]
+}
