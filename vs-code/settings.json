@@ -1,23 +1,32 @@
 {
   // ========== Visuals ==========
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.bracketPairs": "active",
+  "editor.lineNumbers": "interval",
+  "editor.renderWhitespace": "none",
   "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Cyber77",
   "workbench.editor.tabActionLocation": "right",
+  "workbench.editor.tabCloseButton": "right",
   "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "catppuccin-latte",
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredLightColorTheme": "Cyber '77",
+  "workbench.preferredLightColorTheme": "Cyber77",
+  "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
-  "workbench.editor.tabCloseButton": "right",
-  // ========== Editor ========== 
+  "editor.mouseWheelZoom": true,
+  "editor.fontFamily": "'PragmataPro2', 'Maple Mono NF', 'Iosevka SS09', 'JetBrainsMono Nerd Font', monospace",
+  "editor.fontLigatures": true, // Включить лигатуры
+  // ========== Editor ==========
   "debug.onTaskErrors": "debugAnyway",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
   "editor.find.addExtraSpaceOnTop": false,
   "editor.inlineSuggest.enabled": true,
-  // "editor.multiCursorModifier": "ctrlCmd", // !
-  "editor.multiCursorModifier": "alt",
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.unicodeHighlight.invisibleCharacters": false,
@@ -28,23 +37,13 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "'Maple Mono NF2', 'PragmataPro Mono2', 'JetBrainsMono Nerd Font', 'Hurmit Nerd Font', 'Input Mono', monospace",
-  "editor.accessibilitySupport": "off",
-  "editor.mouseWheelZoom": true,
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.guides.bracketPairs": "active",
-  "editor.lineNumbers": "interval",
-  "editor.renderWhitespace": "none", // none
-  // "editor.multiCursorModifier": "ctrlCmd", //!!
-  // "editor.renderWhitespace": "boundary",
-  // "editor.stickyScroll.enabled": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
   "git.autofetch": true,
+  "files.autoSave": "afterDelay",
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
@@ -54,38 +53,22 @@
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
-  "terminal.integrated.defaultProfile.linux": "zsh", //
-  "terminal.integrated.profiles.windows": { //
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "WSL": {
-      "path": "C:\\Windows\\System32\\wsl.exe",
-      "args": []
-    }
-  },
-  "terminal.integrated.defaultProfile.windows": "WSL", //
-  "terminal.integrated.cwd": "${workspaceFolder}", // 
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 5,
   "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/coverage": true,
+    "**/.git": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/.nuxt": true,
     "**/*.snap": true,
     "**/*.svg": true,
-    "**/.git": true,
     "**/.github": false,
-    "**/.nuxt": true,
     "**/.output": true,
     "**/.pnpm": true,
     "**/.vscode": true,
@@ -94,7 +77,6 @@
     "**/bower_components": true,
     "**/dist/**": true,
     "**/logs": true,
-    "**/node_modules": true,
     "**/out/**": true,
     "**/package-lock.json": true,
     "**/pnpm-lock.yaml": true,
@@ -104,14 +86,18 @@
     "**/CHANGELOG*": true,
     "**/LICENSE*": true,
   },
-  "extensions.ignoreRecommendations": true,
-  // ==========  Global Level Config, needs to put in User Settings ========== 
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.git/objects/**": true
+  },
+  // ==========  Global Level Config, needs to put in User Settings ==========
   "window.dialogStyle": "custom",
   "window.nativeTabs": true, // this is great, macOS only
   "window.title": "${rootName}", // this make tabs more readable
   "window.titleBarStyle": "custom",
   "extensions.autoUpdate": "onlyEnabledExtensions",
-  // ========== Extension configs ========== 
+  // ========== Extension configs ==========
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
   "errorLens.enabledDiagnosticLevels": [
@@ -129,54 +115,48 @@
   },
   "eslint.quiet": false,
   // Silent the stylistic rules in you IDE, but still auto fix them
-  // "eslint.rules.customizations": [
-  //   {
-  //     "rule": "style/*",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "format/*",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*-indent",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*-spacing",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*-spaces",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*-order",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*-dangle",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*-newline",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*quotes",
-  //     "severity": "off"
-  //   },
-  //   {
-  //     "rule": "*semi",
-  //     "severity": "off"
-  //   }
-  // ],
-  // "eslint.rules.customizations": [
-  //   {
-  //     "rule": "*",
-  //     "severity": "warn"
-  //   }
-  // ],
+  "eslint.rules.customizations": [
+    {
+      "rule": "style/*",
+      "severity": "off"
+    },
+    {
+      "rule": "format/*",
+      "severity": "off"
+    },
+    {
+      "rule": "*-indent",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spaces",
+      "severity": "off"
+    },
+    {
+      "rule": "*-order",
+      "severity": "off"
+    },
+    {
+      "rule": "*-dangle",
+      "severity": "off"
+    },
+    {
+      "rule": "*-newline",
+      "severity": "off"
+    },
+    {
+      "rule": "*quotes",
+      "severity": "off"
+    },
+    {
+      "rule": "*semi",
+      "severity": "off"
+    }
+  ],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -190,17 +170,6 @@
     "yaml",
     "toml"
   ],
-  "eslint.alwaysShowStatus": true,
-  "eslint.format.enable": true,
-  // "eslint.options": {
-  //   "extensions": [
-  //     ".js",
-  //     ".jsx",
-  //     ".ts",
-  //     ".tsx",
-  //     ".vue"
-  //   ]
-  // },
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
@@ -269,7 +238,9 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   // ========== File Nesting ==========
-  "explorer.fileNesting.enabled": false, //  !!
+  // this might not be up to date with the repo, please check yourself
+  // https://github.com/antfu/vscode-file-nesting-config
+  "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "*.asax": "$(capture).*.cs, $(capture).*.vb",
@@ -341,62 +312,7 @@
     "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
     "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
   },
-  "workbench.iconTheme": "catppuccin-mocha",
-  "files.autoSave": "afterDelay",
-  "scss.lint.unknownAtRules": "ignore",
-  "console-ninja.toolsToEnableSupportAutomaticallyFor": {
-    "live-server-extension": true
-  },
-  "console-ninja.captureFunctions": true,
-  "console-ninja.featureSet": "Pro",
-  "console-ninja.allowConsoleLogToTriggerPredictions": true,
-  "terminal.integrated.env.linux": {},
-  "redhat.telemetry.enabled": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.env.windows": {},
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "cSpell.userWords": [
-    "antfu",
-    "Bifunctor",
-    "bimap",
-    "dockerization",
-    "HKTs",
-    "Monoid",
-    "poolify",
-    "tsbuildinfo",
-    "tseslint"
-  ],
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "wallaby.startAutomatically": true,
-  "quokka.compactMessageOutput": true,
-  "quokka.automaticRestart": true,
-  "database-client.autoSync": true,
-  "remote.autoForwardPortsSource": "hybrid",
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "Notes.notesLocation": "/home/skippy/CURRENT_PROJECTS/Web-Scrapper-SX",
-  "codeium.enableConfig": {
-    "*": true
-  },
-  "codeium.enableCodeLens": false,
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "security.allowedUNCHosts": [
-    "wsl$"
-  ],
-  "cSpell.blockCheckingWhenTextChunkSizeGreaterThan": 999999,
-  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "catppuccin-noctis-icons.hidesExplorerArrows": false,
+  "search.followSymlinks": false,
+  "workbench.preferredDarkColorTheme": "Verdandi",
 }

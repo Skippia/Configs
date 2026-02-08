@@ -1,0 +1,33 @@
+// ────────────── Output Configuration ──────────────
+// You can run `niri msg outputs` to get the correct name for your displays.
+// You will have to remove "/-" and edit it before it takes effect.
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+
+// 1. Ноутбук (Левый) — Масштаб 1.3
+output "eDP-1" {
+    scale 1.3
+    position x=0 y=0
+}
+
+// 2. BenQ (Центральный) — Сдвинулся правее из-за скейла ноутбука
+output "DP-2" {
+    mode "3440x1440@144.000"
+    scale 1.25
+    // Начинается там, где кончается ноутбук (2240 / 1.3 ≈ 1723)
+    position x=1723 y=0
+    variable-refresh-rate on-demand=true
+}
+
+// 3. Samsung (Правый) — Сдвинулся еще правее
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1.0
+    // 1723 (Ноут) + 2752 (BenQ) = 4475
+    position x=4475 y=0
+}
+
+input {
+	tablet {
+		map-to-output "DP-2"
+	}
+}

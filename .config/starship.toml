@@ -1,0 +1,22 @@
+# ~/.config/starship.toml
+
+# Добавляем немного отступов для "воздуха"
+add_newline = true
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+vicmd_symbol = "[V](bold purple)" # Если используешь vi-mode в fish
+
+# Настройка блока Node.js (так как ты Node.js разраб)
+[nodejs]
+symbol = "⬢ "
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[docker_context]
+symbol = " "

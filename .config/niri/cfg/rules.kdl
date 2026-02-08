@@ -1,0 +1,28 @@
+    window-rule {
+		match app-id="com.mitchellh.ghostty"
+    	opacity 0.999
+        geometry-corner-radius 4
+    }
+    
+	window-rule {
+	    // Правило для Study Lab
+	    match app-id="chrome-localhost__-Default" title="SX" 
+	    open-fullscreen true
+	}
+
+	window-rule {
+	    // Правило для Todo
+	    match app-id="chrome-localhost__-Default" title="OS Manager" 
+	    open-fullscreen true
+	} 	
+
+	window-rule {
+	    // Правило для Study Lab
+	    match app-id="chrome-localhost__-Default" title="SXS Search" 
+	    open-fullscreen true
+	}
+
+    layer-rule {
+        match namespace="^noctalia-wallpaper*"
+        place-within-backdrop true
+    }

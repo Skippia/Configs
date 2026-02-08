@@ -1,0 +1,13 @@
+[binds]
+# Копировать файл (Ctrl+C) - для вставки копии
+<Ctrl+c> = exec echo -n "file://$imv_current_file" | wl-copy -t text/uri-list
+
+# Вырезать файл (Ctrl+X) - для перемещения
+<Ctrl+x> = exec printf "cut\nfile://$imv_current_file" | wl-copy -t x-special/gnome-copied-files
+
+# Копировать саму картинку (Shift+C) - для Telegram/Discord
+<Shift+C> = exec wl-copy < "$imv_current_file"
+
+<Delete> = exec trash-put "$imv_current_file" && notify-send "Moved to trash:" "$imv_current_file"
+# Стандартные клавиши
+q = quit
