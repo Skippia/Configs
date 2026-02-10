@@ -11,12 +11,12 @@
 	
 	focus-ring {
 	    width 3
-	    // active-gradient from="#ff00ff" to="#00ffff" angle=45
-   	     active-gradient from="#9ecfff" to="#d8bbff" angle=135
+	     active-gradient from="#ff00ff" to="#00ffff" angle=45
+   	    // active-gradient from="#9ecfff" to="#d8bbff" angle=135
 	}
 
 	border {
-	  	width 1
+	  	width 2
 	    active-gradient from="#7dcfff" to="#bb9af7" angle=45
 	}
 

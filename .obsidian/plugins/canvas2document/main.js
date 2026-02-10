@@ -42,7 +42,8 @@ var import_obsidian = require("obsidian");
 var path = __toESM(require("path"));
 var DEFAULT_SETTINGS = {
   usefrontmatter: true,
-  useedgelabels: true
+  useedgelabels: true,
+  autooverwrite: false
 };
 var C2DSettingTab = class extends import_obsidian.PluginSettingTab {
   constructor(app, plugin) {
@@ -58,9 +59,15 @@ var C2DSettingTab = class extends import_obsidian.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian.Setting(containerEl).setName("Include labels of canvas elements").setDesc("Makes connections descriptions usable in target document").addToggle(
+    new import_obsidian.Setting(containerEl).setName("Include labels of canvas edges (connections)").setDesc("Makes connections descriptions usable in target document").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.useedgelabels).onChange(async (value) => {
         this.plugin.settings.useedgelabels = value;
+        await this.plugin.saveSettings();
+      })
+    );
+    new import_obsidian.Setting(containerEl).setName("Overwrite existing target documents without confirmation").setDesc("User confirmation is not needed to overwrite existing target documents").addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.autooverwrite).onChange(async (value) => {
+        this.plugin.settings.autooverwrite = value;
         await this.plugin.saveSettings();
       })
     );
@@ -168,6 +175,7 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     const fileContents = await Promise.all(
       textfilenames.map(
         async (file) => [file, await this.app.vault.cachedRead(this.app.vault.getAbstractFileByPath(file))]
+        //   async (file) => [file, await this.app.vault.adapter.read(file)] as const,
       )
     );
     for (const xfile of filenames) {
@@ -187,9 +195,9 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
         const frontMatterInfo = (0, import_obsidian.getFrontMatterInfo)(found[1]);
         let textfilestring = "";
         if (this.settings.usefrontmatter && frontMatterInfo.exists) {
-          textfilestring = found[1].substring(frontMatterInfo.contentStart);
-        } else {
           textfilestring = found[1];
+        } else {
+          textfilestring = found[1].substring(frontMatterInfo.contentStart);
         }
         doccontentstring += textfilestring + "\n\n";
       } else if (xfile.startsWith("http")) {
@@ -200,13 +208,13 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     }
     let docFilename;
     if (mdFolderPath == ".") {
-      docFilename = activeFile.basename + "_fromC2D.md";
+      docFilename = activeFile.basename + "_final.md";
     } else {
-      docFilename = mdFolderPath + "/" + activeFile.basename + "_fromC2D.md";
+      docFilename = mdFolderPath + "/" + activeFile.basename + "_final.md";
     }
     try {
       const exists = await this.fsadapter.exists(docFilename);
-      if (exists) {
+      if (exists && !this.settings.autooverwrite) {
         const confirmed = await new Promise((resolve) => {
           const notice = new import_obsidian.Notice("File " + docFilename + " already exists. Overwrite?", 0);
           notice.noticeEl.createEl("button", { text: "Yes" }).onclick = () => {
@@ -268,8 +276,7 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
       let children = myparsed_data.edges2.filter((edge) => edge.fromNode === child).map((edge) => edge.toNode);
       if (children.length > 0) {
         const continueRecursion = await this.findAllXChildren(children, myparsed_data, fileContents, handledNodes, limitrecurseNodes, runcounterfunc, runcounterforeach);
-        if (!continueRecursion)
-          return false;
+        if (!continueRecursion) return false;
       }
     }
     ;
@@ -444,7 +451,8 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
             const firstline = found[5].split("\n")[0];
             const found5 = firstline.replace(/#/g, "");
             if (edge.label != void 0) {
-              contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + cnfname + '">' + edge.label + '</edgelabel>")\n';
+              const sanitizedLabel = edge.label.replace(/\n/g, " - ");
+              contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + cnfname + '">' + sanitizedLabel + '</edgelabel>")\n';
             } else {
               contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
             }
@@ -475,7 +483,8 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
             const firstline = found[5].split("\n")[0];
             const found5 = firstline.replace(/#/g, "");
             if (edge.label != void 0) {
-              contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + element[2] + '">' + edge.label + '</edgelabel>")\n';
+              const sanitizedLabel = edge.label.replace(/\n/g, " - ");
+              contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + element[2] + '">' + sanitizedLabel + '</edgelabel>")\n';
             } else {
               contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
             }
@@ -503,7 +512,8 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
               const firstline = found[5].split("\n")[0];
               const found5 = firstline.replace(/#/g, "");
               if (edge.label != void 0) {
-                contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + element[2] + '">' + edge.label + '</edgelabel>")\n';
+                const sanitizedLabel = edge.label.replace(/\n/g, " - ");
+                contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + element[2] + '">' + sanitizedLabel + '</edgelabel>")\n';
               } else {
                 contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
               }
@@ -530,7 +540,8 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
               const firstline = found[5].split("\n")[0];
               const found5 = firstline.replace(/#/g, "");
               if (edge.label != void 0) {
-                contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + element[2] + '">' + edge.label + '</edgelabel>")\n';
+                const sanitizedLabel = edge.label.replace(/\n/g, " - ");
+                contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + ']] ("<edgelabel data="' + element[2] + '">' + sanitizedLabel + '</edgelabel>")\n';
               } else {
                 contentString += "> linked from: [[#^" + edge.fromNode + "|" + found5 + "]]\n";
               }
@@ -542,7 +553,7 @@ var Canvas2DocumentPlugin = class extends import_obsidian.Plugin {
     }
     try {
       const exists = await this.fsadapter.exists(canvasFilename);
-      if (exists) {
+      if (exists && !this.settings.autooverwrite) {
         const confirmed = await new Promise((resolve) => {
           const notice = new import_obsidian.Notice("File " + canvasFilename + " already exists. Overwrite?", 0);
           notice.noticeEl.createEl("button", { text: "Yes" }).onclick = () => {

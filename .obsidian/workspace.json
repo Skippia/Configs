@@ -1,56 +1,41 @@
 {
   "main": {
-    "id": "e2caf02c3e6d745e",
+    "id": "f010fbf90b7536da",
     "type": "split",
     "children": [
       {
-        "id": "8fce5ece3311f946",
+        "id": "67b76a77b3e0159e",
         "type": "tabs",
         "children": [
           {
-            "id": "2f57c6a187ede4c8",
+            "id": "588f6dc0b0bb5354",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TEMP.md",
+                "file": "4.Devops & Infra/4.1.Docker/sub/7. Docker networking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TEMP"
-            }
-          },
-          {
-            "id": "d8fadb57964e6f94",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Misc/Content/Actresses.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Actresses"
+              "title": "7. Docker networking"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "b5077582b5965425",
+    "id": "50d804587b7d1584",
     "type": "split",
     "children": [
       {
-        "id": "1936bed2cb57c95f",
+        "id": "c975eae29e0ac140",
         "type": "tabs",
         "children": [
           {
-            "id": "308cc4e5e73600f3",
+            "id": "195702eb46b26dba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,12 +48,12 @@
             }
           },
           {
-            "id": "460b9ae1b239ed87",
+            "id": "0476b50999f39361",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"consumer group\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +65,7 @@
             }
           },
           {
-            "id": "fd38e567d3dc4390",
+            "id": "b435dfb1349f525f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -93,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.50418853759766
+    "width": 325.5040168762207
   },
   "right": {
-    "id": "d9ed25606f8a08ee",
+    "id": "c0cf89c1c57099c1",
     "type": "split",
     "children": [
       {
-        "id": "10eccd641a9d38d7",
+        "id": "5bbf81b8baa21548",
         "type": "tabs",
         "children": [
           {
-            "id": "382bb2c2e5eaf5f6",
+            "id": "6dd4d4c7843bced7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sex Investigation/Men tips.canvas",
+                "file": "Useful services.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Men tips"
+              "title": "Backlinks for Useful services"
             }
           },
           {
-            "id": "03daba7a89462cce",
+            "id": "9ea6b7b5575f5979",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sex Investigation/Men tips.canvas",
+                "file": "4.Devops & Infra/4.1.Docker/sub/7. Docker networking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Men tips"
+              "title": "Outgoing links from 7. Docker networking"
             }
           },
           {
-            "id": "81a1f6fa4cee6341",
+            "id": "2fceccbdc978a7cb",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -152,29 +137,40 @@
             }
           },
           {
-            "id": "0d0887c17396a68f",
+            "id": "4b1997e42cd96140",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sex Investigation/Men tips.canvas",
+                "file": "4.Devops & Infra/4.1.Docker/sub/7. Docker networking.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Men tips"
+              "title": "Outline of 7. Docker networking"
+            }
+          },
+          {
+            "id": "1b8817bce581a51f",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -183,71 +179,71 @@
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "omnisearch:Omnisearch": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "obsidian-importer:Open Importer": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "callout-manager:Insert Callout": false,
-      "dbfolder:Create a new database table": false
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Smart Connections: Open random connection": false
     }
   },
-  "active": "d8fadb57964e6f94",
+  "active": "1b8817bce581a51f",
   "lastOpenFiles": [
-    "TEMP.md",
-    "_assets/image-288.webp",
-    "_assets/image-287.webp",
-    "Misc/Content/Actresses.md",
-    "_assets/image-286.webp",
-    "Education/unknown-course/1/Root.md",
-    "Education/unknown-course/1",
-    "Education/unknown-course",
-    "Sex experiments.md",
-    "Big pictures/2. Kissing — Big Picture/Kiss ultimate map.md",
-    "_assets/image-285.webp",
-    "_assets/image-284.webp",
-    "_assets/image-283.webp",
-    "_assets/image-282.webp",
-    "_assets/image-281.webp",
-    "_assets/image-280.webp",
-    "_assets/image-279.webp",
-    "Big pictures/2. Kissing — Big Picture/Kissing - practice.canvas",
-    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_225947_extracted.mp4",
-    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230043_extracted.mp4",
-    "Sex Investigation/Ultimate maps/Men tips - [Map].md",
-    "Sex Investigation/Men tips.canvas",
-    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230410_extracted 1.mp4",
-    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230410_extracted.mp4",
-    "Sex Investigation/2. sessions - practice.md",
-    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230612_extracted.mp4",
-    "Sex Investigation/3. sex sequence - practice.md",
-    "_assets/01.mp4-20250323_191555_extracted.mp4-20250323_230720_extracted.mp4",
-    "_assets/rubrub.tiny.little.titties.4.disc2-mrspalmer.mp4-20250323_180049_extracted.mp4-20250323_232618_extracted.mp4",
-    "_assets/rubrub.tiny.little.titties.4.disc2-mrspalmer.mp4-20250323_180049_extracted.mp4-20250323_232641_extracted.mp4",
-    "Sex Investigation/Ultimate maps/Common pose variations.md",
-    "Education/Erogenous zones.md",
-    "Education/13. petting.md",
-    "Education/Random sex tips.md",
-    "Misc/Sex clothes in shops.md",
-    "TODO.md",
-    "Ideas/Dating ideas & Scenarios & Strategy.md",
-    "Sex Investigation/Poses tips.canvas",
-    "Ideas/Detailed-scenarios (Role play).md",
-    "Ideas/Genius ideas.md",
-    "Sex Investigation/Transitions between poses.md",
-    "Sex Investigation/Ultimate maps/Poses - [Map].md",
-    "Big pictures/1. How to F long — Big Picture/Book 1.md",
-    "Ideas/Ideas - practice.md",
-    "useful videos - tips.md",
-    "ш.md",
-    "Sex Investigation/Ultimate maps/Ideas - [Map].md",
-    "Sex Investigation/Women tips.canvas",
-    "Sex Investigation/Ultimate maps/Men tips - [Map] - Copy.md",
+    "4.Devops & Infra/4.1.Docker/Cheat sheet.md",
+    "4.Devops & Infra/4.1.Docker/Docker-compose with Microservices.md",
+    "4.Devops & Infra/4.1.Docker/Docker.md",
+    "1.4.Asynchrony/Root.md",
+    "obsidian-style-settings/styles.css",
+    "obsidian-style-settings/manifest.json",
+    "obsidian-style-settings/main.js",
+    "obsidian-style-settings/data.json",
+    "obsidian-style-settings",
+    "4.Devops & Infra/deps vs devDeps vs peerDeps.md",
+    "Temp/Drawing 2026-02-09 11.59.56.excalidraw.md",
+    "Untitled.base",
+    "Shortcuts.md",
+    "Programming terms & concepts.md",
+    "3.Data Management & Storage/3.2.Distributed Data/Root.md",
+    "4.Devops & Infra/4.1.Docker/0. Docker ROOT.excalidraw.md",
+    "4.Devops & Infra/4.6.Monorepo.md",
+    "4.Devops & Infra/Обзор на учебу.md",
+    "4.Devops & Infra/4.6. HAProxy.md",
+    "3.Data Management & Storage/3.6.Message brokers/Kafka/Root.md",
+    "Storytelling features and bugs.md",
+    "Interview's requirements.md",
+    "_assets/image-616.webp",
+    "Blogs.md",
+    "Outgoing books & courses.md",
+    "1.5.Paradigms of programming/Reactive programming/Root.md",
+    "1.1.Algorithmes/4. Dynamic programming.md",
+    "1.1.Algorithmes/1. Basics/1. Array.md",
+    "Prompt for extracting cards.md",
+    "1.5.Paradigms of programming/Dynamic programming/Root.md",
+    "Interview/Career mindmap.md",
+    "_assets/image-615.webp",
+    "_assets/image-614.webp",
+    "_assets/image-613.webp",
+    "_assets/image-612.webp",
+    "_assets/image-611.webp",
+    "Prompt for supplement my cards.md",
+    "1.1.Algorithmes/3. Advanced data structures/1. Tree.md",
+    "_assets/image-610.webp",
+    "_assets/image-609.webp",
+    "_assets/image-608.webp",
+    "_assets/image-607.webp",
+    "2.Software Architecture & Design/2.3.Microservices/patterns/patterns-in-details/2.data-management/CQRS/CQRS.excalidraw",
+    "2.Software Architecture & Design/2.3.Microservices/patterns/patterns-in-details/2.data-management/CQRS/CleanARCh.excalidraw",
+    "2.Software Architecture & Design/2.3.Microservices/patterns/patterns-in-details/2.data-management/CQRS/CamperDDD+CQRS.excalidraw",
+    "1.1.Algorithmes/2. Data structures",
+    "____Gigachad me____/My life.canvas",
+    "Condoms size.canvas",
     "Ideas/Ideas.canvas",
-    "Sex Investigation/Men tips - Copy (4).canvas",
-    "Sex Investigation/Men tips - Copy (3).canvas",
-    "Sex Investigation/Men tips - Copy (2).canvas",
-    "Sex Investigation/Men tips - Copy.canvas",
-    "Condoms size.canvas"
+    "Big pictures/1. How to F long — Big Picture/Root.canvas",
+    "Big pictures/0. Girl fucking mindset — Big Picture/Root.canvas",
+    "Sex Investigation/Women tips/Women tips.canvas",
+    "Sex Investigation/Men tips/Men tips.canvas",
+    "Sex Investigation/Poses/Poses tips.canvas"
   ]
 }

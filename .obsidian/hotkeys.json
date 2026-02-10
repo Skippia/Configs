@@ -16,7 +16,14 @@
     }
   ],
   "make-md:mk-blink": [],
-  "switcher:open": [],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
   "creases:crease-current-folds": [
     {
       "modifiers": [
@@ -198,7 +205,7 @@
   "editor:open-search": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
       "key": "F"
     }
@@ -256,7 +263,7 @@
       "modifiers": [
         "Mod"
       ],
-      "key": "O"
+      "key": "F"
     }
   ]
 }
